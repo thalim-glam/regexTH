@@ -36,18 +36,36 @@ and the detail descriptions are provided below.
  - Regex provides a variety of quantifiers that one can use to match the sequesnce.
  - The * quantifier represents, zero or more occurences of the pattern.
  - The + quantifier represents, one or more occurences of the pattern.
+ - The ? quantifier represents, zero or one occurance of any character.
+ - The bracket quantifier consists of a pair of curly braces, like {}, containing one or two numbers with an optional comma between the braces:
+ - - p{m} matches precisely m occurrences of the pattern p.
+ - - p{m,} matches m or more occurrences of p.
+ - - p{m,n} matches m or more occurrences of p, but not more than n.
  - The quantifiers are always applied to only one pattern, the one it finds to the left of the quantifier. 
  
 ### OR Operator
-
+ - Regex has a "Logical OR" operator known as "the pipe".
+ - It simply means this or that.
+ - For example, 'The petshop have (cats|dogs)'
+ 
 ### Character Classes
+ - Character class in regular expression represents set of characters, any one of which can occur in an input string to fullfill matching requirement. Some common character classes are:
+ - \d is equivalent to [0-9], matches any numeric digit.
+ - . matches any character except the new line 
+ - \n matches new line
+ - \w matches any alpha numeric character, equivalent to [A-Z0-9a-z_]
+ - \s matches single whitespace including tabs and line break.
+ - \D matches non-digit character.
 
 ### Flags
 
 ### Grouping and Capturing
 
 ### Bracket Expressions
-
+ - Anything inside a set of square brackets ([]) represents a range of characters that must be matched. These patterns are known as bracket expressions
+ - For example, [a-z] will look for a match that includes any alphabet between a and z.
+ - Similarly, [a-z0-9_-], this will match any string that includes any combination of lowercase letters between a and z, any number between 0 and 9, and the special characters of an underscore or a hyphen.
+ 
 ### Greedy and Lazy Match
 
 ### Boundaries
